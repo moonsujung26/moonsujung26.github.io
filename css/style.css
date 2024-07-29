@@ -1,0 +1,387 @@
+:root {
+    --primary-color: #fff1b0;
+    --second-color: #f3d2d9;
+    --trinity-color: #9ac3df;
+    --font-color: #333;
+    --wt-color: #fff;
+    --line-color: #ddd;
+    --back01-color: linear-gradient(180deg, rgba(243, 210, 217, 1) 0%, rgba(154, 195, 223, 1) 100%);
+    --back02-color: linear-gradient(180deg, rgba(154, 195, 223, 1) 0%, rgba(243, 210, 217, 1) 100%);
+
+}
+
+
+.inner {
+    max-width: 1410px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 5rem;
+}
+
+.tit {
+    max-width: 1410px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+.table th {
+    text-align: left;
+    font-weight: 600;
+    width: 100px;
+    height: 40px;
+    padding: 8px 0;
+    text-transform: uppercase;
+}
+
+.table td {
+    text-align: left;
+}
+
+.bg::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    background: url(../images/back-pattern.png);
+}
+
+.buble span {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background-color: #f7c8ff;
+    border-radius: 50%;
+    margin: 0 8px;
+
+}
+
+
+
+
+
+
+#hd h1 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    position: fixed;
+    top: 4rem;
+    left: 80px;
+    z-index: 999;
+}
+
+#hd .gnb {
+    position: fixed;
+    top: 50%;
+    right: 8rem;
+    z-index: 999;
+    text-align: right;
+}
+
+#hd .gnb li .op {
+    position: relative;
+    font-size: 0;
+
+}
+
+#hd .gnb li .op::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    width: 40px;
+    height: 2px;
+    background: var(--font-color);
+    transition: 0.3s 0.1s;
+}
+
+#hd .gnb li.on .op::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    width: 80px;
+    height: 2px;
+    background: var(--wt-color);
+
+}
+
+
+#hd .gnb li a {
+    display: block;
+    line-height: 3.2rem;
+    font-size: 1.6rem;
+    color: var(--font-color);
+}
+
+#hd .gnb li.on a {
+    color: var(--wt-color);
+}
+
+
+/* //헤더끝// */
+
+.intro {
+    position: relative;
+    background: var(--back01-color);
+
+}
+
+.intro .inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 600px;
+    border: 1px solid var(--wt-color);
+    backdrop-filter: blur(7px);
+    z-index: 2;
+}
+
+
+.intro .inner .tit {
+    padding: 0 6rem;
+
+}
+
+.intro .inner .tit h2 {
+    font-size: 12rem;
+    margin: 0 0 40px 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+    letter-spacing: -16px;
+    text-transform: uppercase;
+    color: var(--wt-color);
+}
+
+.intro .inner .tit h2 span {
+    display: inline-block;
+}
+
+.intro .inner .tit p {
+    display: block;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    color: var(--wt-color);
+}
+
+.intro .circle01 {
+    position: absolute;
+    top: -16%;
+    left: -5%;
+    filter: drop-shadow(5px 5px 5px rgba(255, 255, 255, 0.4));
+}
+
+.intro .circle02 {
+    position: absolute;
+    bottom: -28%;
+    right: -15%;
+    filter: drop-shadow(5px 5px 5px rgba(255, 255, 255, 0.5));
+    z-index: 1;
+}
+
+.intro .dots01 {
+    position: absolute;
+    bottom: 0;
+    left: 16%;
+    transform: rotate(12deg);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 30%);
+    width: 20rem;
+    height: 16rem;
+    background: url(../images/dots-01.png);
+    opacity: 0.3;
+}
+
+.intro .dots02 {
+    position: absolute;
+    top: -8%;
+    right: 30%;
+    transform: rotate(150deg);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 30%);
+    width: 20rem;
+    height: 16rem;
+    background: url(../images/dots-01.png);
+    opacity: 0.3;
+}
+
+/* //인트로끝// */
+
+
+.scrollDown {
+    position: fixed;
+    bottom: 20rem;
+    left: 8rem;
+    font-size: 1.4rem;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    transform: rotate(90deg);
+    z-index: 1;
+}
+
+.scrollDown::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 8rem;
+    transform: translate(0, -50%);
+    width: 100px;
+    height: 1px;
+    background: var(--font-color);
+}
+
+.scrollDown::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 8rem;
+    transform: translate(0, -50%);
+    width: 24px;
+    height: 3px;
+    background: var(--wt-color);
+    animation: scroll 1.5s infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translate(0, -50%);
+    }
+
+    100% {
+        transform: translate(76px, -50%);
+    }
+}
+
+
+/* //스크롤 다운끝// */
+
+.pt01 {
+    position: relative;
+    overflow: hidden;
+    background: var(--trinity-color);
+}
+
+.pt01 .inner {
+    display: flex;
+    align-items: center;
+    padding: 60px 0 0 0;
+}
+
+.pt01 .inner .slide_wrap {
+    position: relative;
+    width: 1000px;
+    height: 100vh;
+    overflow: hidden;
+    background: url(../images/mac11-02.png) no-repeat center center;
+
+}
+
+.pt01 .inner .slide_wrap .in {
+    position: absolute;
+    top: 43.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 470px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.pt01 .inner .slide_wrap .in .con01 {}
+
+
+
+.pt01 .inner .desc {
+    position: absolute;
+    top: 54%;
+    right: 0;
+}
+
+.pt01 .inner .desc .itm {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.pt01 .inner .desc .itm.on {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+
+.pt01 .buble {
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    transform: translate(-50%, -50%)rotate(10deg);
+}
+
+
+.pt01 .buble span:nth-child(2) {
+    margin: -15px 0;
+}
+
+.pt01 .buble span:nth-child(4) {
+    margin: -40px 0;
+}
+
+.fp-slidesNav{
+    left:50%;
+}
+.fp-slidesNav.bottom {
+    bottom: 50px;;
+}
+
+/* //pt01 끝// */
+
+
+.pt02 {
+    background: var(--back02-color);
+}
+
+.pt02 .tit h2 {
+    margin: 0 0 40px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+
+
+.pt02 .inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    z-index: 3;
+}
+
+.pt02 .inner>* {
+    flex: 1;
+}
+
+
+.pt02 .inner figure {
+    width: 450px;
+    height: 224px;
+    border: 1px solid var(--wt-color);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+/* //pt02 끝// */
+
+.profile {
+    background: var(--second-color);
+    padding: 40px 0;
+}
